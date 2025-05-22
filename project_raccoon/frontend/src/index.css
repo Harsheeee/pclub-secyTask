@@ -1,0 +1,144 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #fffcf2;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fffcf2;
+  font-family: "consolas";
+}
+.login h1{
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.login h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.login input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 2px;
+}
+.login button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+.login button:hover {
+  background-color: #0056b3;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fffcf2;
+  font-family: "consolas";
+}
+.home h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.home button.exit {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+.home button.exit:hover {
+  background-color: #0056b3;
+}
+.home button.submit{
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+.home button.submit:hover {
+  background-color: #0056b3;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fffcf2;
+  font-family: "consolas";
+}
+.dashboard h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.dashboard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.dashboard input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 2px;
+}
+.dashboard button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+.dashboard button:hover {
+  background-color: #0056b3;
+}
+.dashboard table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+.dashboard th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+.dashboard th {
+  background-color: #f2f2f2;
+}
+.dashboard tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.dashboard tr:hover {
+  background-color: #f1f1f1;
+}
+
