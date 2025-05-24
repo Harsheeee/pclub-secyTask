@@ -68,9 +68,12 @@ const Dashboard: React.FC = () => {
 
   return (
     <div className='dashboard'>
+      <div className="top-right-buttons">
+        <button className="exit" onClick={handleExit}>Exit</button>
+        <button className="backHome" onClick={() => navigate("/home")}>Home</button>
+      </div>
       <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center' }}>
         <h2>Client Dashboard</h2>
-        <button onClick={handleExit}>Exit</button>{}
       </div>
       <p><strong>Group:</strong> {groupName}</p>
 

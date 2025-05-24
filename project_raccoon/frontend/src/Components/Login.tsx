@@ -11,14 +11,19 @@ function Login() {
     try {
       const res = await axios.post('http://localhost:5000/login', { username, password })
       localStorage.setItem('token', res.data.access_token)
-      alert('Login successful!')
+      //alert('Login successful!')
       navigate('/home');
     } catch (err: any) {
       alert(err.response.data.message)
       if (err.response.data.message === "User not found") {
+        //alert('User not found. Please register first.');
         navigate('/register');
       }
     }
+  }
+
+  const newUser = () => {
+    navigate('/register');
   }
 
   return (
@@ -26,8 +31,13 @@ function Login() {
       <h1>Welcome to Project Raccoon</h1>
       <h2>Login</h2>
       <input placeholder="Username" onChange={e => setUsername(e.target.value)} />
-      <input type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
+      <input type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} onKeyDown={e=>{
+        if (e.key === 'Enter') {
+          handleLogin();
+        }
+      }} />
       <button onClick={handleLogin}>Login</button>
+      <p>Don't have an account? <a href="#" onClick={newUser}>Register here</a></p>
     </div>
   )
 }

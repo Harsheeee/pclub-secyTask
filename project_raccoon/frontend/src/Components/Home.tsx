@@ -82,7 +82,10 @@ const HomePage: React.FC = () => {
   return (
     <div className="home">
       <h1>Welcome to Project Raccoon</h1>
-      <button className="exit" onClick={handleExit}>Exit</button>{}
+      <div className="top-right-buttons">
+        <button className="exit" onClick={handleExit}>Exit</button>
+        <button className="dash" onClick={() => navigate("/dashboard")}>Dashboard</button>
+      </div>
       <form onSubmit={handleSubmit}>
         <div style={{ marginBottom: 16 }}>
           <label htmlFor="groupName">Select Group:</label>
